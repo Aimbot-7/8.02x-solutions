@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ \usepackage{graphicx}
+ \usepackage{titling}
+
+ \title{Assignment \textbf{10} (Lecture 32-36)
+}
+\author{Syed Suhaib Ahmad}
+\date{\today}
+ 
+ \usepackage{fancyhdr}
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+    \fancyhf{} % clear all header and footer fields
+    
+    \fancyfoot[C]{1}
+    \fancyhead[L]{8.02x - Electricity and Magnetism}
+    \fancyhead[R]{\theauthor}
+}
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+    %{\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
+
+\usepackage{lipsum}  
+%\usepackage{cmbright}
+
+\begin{document}
+
+\maketitle
+
+
+\subsubsection*{Problem 10.1 - Brewster Angle I}
+What would Brewster’s angle be for reflections off the surface of water for light coming from beneath the surface? Compare to the angle for total internal reflection, and to Brewster’s angle from above the surface.
+\\
+\\\textbf{Solution}
+\\
+\\Index of refraction for water is 1.33 and for air is 1.00. Brewster's angle for light coming beneath the surface of water is
+\[\theta_p=\tan^{-1}\left(\frac{1}{1.33}\right)=36.9\text{°}.\]
+The critical angle of light taking the same path as above is
+\[\theta_c=\sin^{-1}\left(\frac{1}{1.33}\right)=48.8\text{°},\]
+and Brewster's angle for light coming above the surface of water is
+\[\theta_p=\tan^{-1}\left(\frac{1.33}{1}\right)=53.1\text{°}.\]
+
+\subsubsection*{Problem 10.2 - Brewster Angle I}
+At what angle above the horizon is the Sun when light reflecting off a smooth lake is polarized most strongly?
+\\
+\\\textbf{Solution}
+\\
+\\Reflected light of the surface of water, when it is incident from above, is 100\% polarized at an angle of 53.1° with the vertical (from problem 10.1). Thus, the sun has to be 36.9° above the horizon for this to occur. 
+
+\subsubsection*{Problem 10.3 - Circularly Polarized Light}
+Circularly polarized light is incident on an “ideal” (HN-50) polarizer. Which fraction of the light intensity gets through. Is the light that makes it through linearly polarized?
+\\
+\\\textbf{Solution}
+\\
+\\Circularly polarized light can be written as two orthogonal linearly polarized components:
+\[E_x=E_0\cos(kx-\omega t)\,\,\,\,\,\text{and}\,\,\,\,\,E_y=E_0\sin(kx-\omega t).\]
+For an ideal polarizer, only the components of electric field that are along its transmission axis are transmitted. Let the transmission axis makes an angle $\alpha$ with the $x-$axis and is given by the unit vector
+\[\boldsymbol{\hat{r}}=\boldsymbol{\hat{x}}\cos\alpha+\boldsymbol{\hat{y}}\sin\alpha.\]
+The transmitted electric field is the projection of incident electric field onto the polarizer's transmission axis. 
+\[\boldsymbol{\vec{E_{\text{trans}}}}=(\boldsymbol{\vec{E}}\cdot\boldsymbol{\hat{r}})\boldsymbol{\hat{r}}=((E_0\cos(kx-\omega t)\boldsymbol{\hat{x}}+E_0\sin(kx-\omega t)\boldsymbol{\hat{y}})\cdot(\boldsymbol{\hat{x}}\cos\alpha+\boldsymbol{\hat{y}}\sin\alpha))\boldsymbol{\hat{r}}\]
+\[=(E_0\cos(kx-\omega t)\cos\alpha+E_0\sin(kx-\omega t)\sin\alpha)\boldsymbol{\hat{r}}\]
+\[=E_0\cos(kx-\omega t-\alpha)\boldsymbol{\hat{r}}.\]
+The above result shows that the transmitted light is linearly polarized as it has a single oscillatory component in a fixed direction $\boldsymbol{\hat{r}}$.
+As far as the light intensity is concerned, 
+\[I_{\text{trans}}=I_0\cos^2\alpha.\]
+Since light is oscillating in all directions perpendicular to its propagation, it makes varying angles with the transmission axis of the polarizer. Thus, we take the time averaged value of the cosine squared function, which is $\frac{1}{2}$. This means half of the incident light intensity gets through.
+\end{document}
